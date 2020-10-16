@@ -19,6 +19,7 @@ class PlaySong : AppCompatActivity(),View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_play_song)
+
         handler= Handler()
         mediaPlayer= MediaPlayer()
         getSerializableData()
@@ -98,14 +99,14 @@ class PlaySong : AppCompatActivity(),View.OnClickListener {
            R.id.play->{
                if(mediaPlayer.isPlaying)
                {
-                   play.setImageResource(R.drawable.play)
+                   play.setImageResource(R.drawable.ic_play)
                    mediaPlayer.pause()
                    handler.removeCallbacks(runnable)
 
                }
                else{
                    initSeekBar()
-                   play.setImageResource(R.drawable.pause)
+                   play.setImageResource(R.drawable.ic_pause)
                    mediaPlayer.start()
                }
            }

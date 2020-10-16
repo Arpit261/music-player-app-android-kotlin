@@ -1,60 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    
     android:layout_width="match_parent"
     android:background="@drawable/music_card_design"
     android:layout_height="wrap_content">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:background="@drawable/music_player_design"
         android:padding="8dp">
 
         <ImageView
             android:id="@+id/image"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
             android:src="@drawable/music"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            />
 
         <TextView
             android:id="@+id/songName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginLeft="16dp"
+           android:layout_marginLeft="18sp"
+            android:layout_toRightOf="@id/image"
             android:layout_marginTop="8dp"
-            android:text="shape of you"
+            android:textSize="18sp"
+            android:text="Name of the song"
             android:textColor="#fff"
-            app:layout_constraintStart_toEndOf="@+id/image"
-            app:layout_constraintTop_toTopOf="parent" />
+            />
 
         <TextView
             android:id="@+id/artistName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="Astif Aslam"
-            android:textColor="#fff"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.061"
-            app:layout_constraintStart_toEndOf="@+id/image"
-            app:layout_constraintTop_toBottomOf="@+id/songName" />
+            android:layout_marginTop="14dp"
+            android:text="Artist"
+            android:layout_marginLeft="18sp"
+            android:layout_below="@id/songName"
+            android:layout_toRightOf="@id/image"
+            android:textSize="15sp"
+            android:textColor="#A39A9A"
+           />
 
         <TextView
             android:id="@+id/time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_alignParentRight="true"
+
+           android:layout_alignBottom="@id/artistName"
             android:text="02:43"
             android:textColor="#fff"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.859"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/artistName" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+           />
+    </RelativeLayout>
 
-</androidx.cardview.widget.CardView>
+</RelativeLayout>
